@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    background-attachment: fixed;
+    flex-direction: column;
+    background-image: url("https://th.bing.com/th/id/R.ef68615106cba7f5d12d9701e2746492?rik=nWzvfV%2fgeDJEIQ&riu=http%3a%2f%2fassets3.thrillist.com%2fv1%2fimage%2f1306806%2fsize%2ftl-no_parallax_cs_2x%2fthe-25-most-beautiful-college-campuses-in-america&ehk=tv1Gq0zer52S0ke62pAK%2fUaO5FlLU8mszCRsDl1RLgg%3d&risl=&pid=ImgRaw&r=0");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+:root{
+    --black-color:rgb(0, 0, 0);
+    --text-color:rgb(255, 255, 255);
+    --main-color:rgb(22, 168, 242);
+    --other-color:rgb(40, 40, 40);
+    --transparant:rgba(255,255,255,0.1);
+    --bg-color:rgba(0 ,0 ,0 ,0.5);
+    --heading:0.8cm;
+    --heading-weight:800;
+}
+/* -----------------header section------------------ */
+header{
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 4%;
+    background: transparent;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter:blur(5px) ;
+    z-index: 10001;
+}
+.logo{
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.logo a{
+    color: var(--text-color);
+    font-weight: 800;
+    text-decoration: none;
+}
+.logo i{
+    color: var(--main-color);
+    vertical-align: middle;
+    font-size: 2.3rem;
+}
+.navlist{
+    padding: 5px;
+    
+}
+.navlist li{
+    list-style: none;
+}
+.navlist ul{
+    display: flex;
+    padding: 1cm;
+   
+}
+.navlist a{
+    color: var(--text-color);
+    margin-right: 3rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+.navlist a:hover{
+    font-weight: 500;
+    color: var(--main-color);
+    font-size: 1.1rem;
+}
+
+/* -----------------home section-------------------- */
+.home{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.home h1,
+.home span,
+.home .btn{
+    position: relative;
+    z-index: 2;
+}
+
+.home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.home h1{
+    
+    font-weight: 600;
+    font-size: 2cm;
+    color: var(--text-color);
+}
+.home span{
+    color: var(--main-color);
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+.btn{
+    width: 6cm;
+    height: 1.8cm;
+    background-color: var(--other-color);
+    border-radius: 3rem;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    color: var(--text-color);
+    transition: all .50s ease;
+    margin-top: 20px;
+
+}
+
+
+.btn:hover{
+    background-color: var(--main-color);
+    color: var(--black-color);
+    box-shadow: 0px 0px 25px var(--main-color);
+    transform: scale(1.1);
+ 
+}
+.home img{
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    
+}
+
+/* ----------------------about section--------------------- */
+.about{
+    width: 100%;
+    display: block;
+    justify-content: center;
+    justify-content: center;
+    text-align:center ;
+    padding: 7cm 0cm;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.about span{
+    font-size: 1.5cm;
+    font-weight:800 ;
+    color: var(--main-color);
+    margin-top:-2cm ;
+}
+.about h1{
+    margin-top: 2cm;
+    font-size: 0.8cm;
+    font-weight: 130;
+    color: var(--text-color);
+}
+           /* Facilities sections */
+.Facilities{
+    width: 100%;
+    padding: 6cm 0cm;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);;
+    
+}
+
+.Facilities .title{
+    color: var(--text-color);
+    margin: 3cm;
+    font-size: 1.3cm;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    
+}
+.card{
+    display: inline;
+    padding: 1.4cm;
+    margin: 1cm;
+    border-radius: 3rem;
+    backdrop-filter: blur(5px);
+    background-color: var(--transparant);
+    transition: all 0.5s ease;
+}
+.card:hover{
+    transform: translateY(-1rem);
+}
+
+.card i{
+    font-size: 3.5cm;
+    color: var(--text-color);
+    transition: all .50s ease;
+}
+.card i:hover{
+    transform: scale(1.2);
+}
+.card h1{
+    color: var(--main-color);
+    font-weight: 800;
+}
+.card span{
+    color: var(--text-color);
+    font-size: 15px;
+
+}
+.card .btn{
+     width: 4cm;
+    height: 1.3cm;
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    color: var(--text-color);
+    transition: all .50s ease;
+    margin-top: 10px;
+}
+.card .btn:hover{
+    transform: scale(1.1);
+    color: var(--black-color);
+}
+.contect{
+    width: 100%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--black-color);
+    text-align: center;
+    padding: 7cm 0cm;
+}
+.sction{
+    display: flex;
+
+}
+.contect h1{
+    color: var(--text-color);
+}
+
+.faculty{
+    display: grid;
+    text-align: left;
+    padding: 3cm;
+    border-right: 1px solid var(--other-color);
+
+}
+
+.faculty a,.campuses a{
+    color: var(--other-color);
+    text-decoration: none;
+    padding: 5px;
+    transition: all .50s ease;
+}
+.faculty a:hover,.campuses a:hover{
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+.campuses{
+    display: grid;
+    text-align: left;
+    padding: 3cm;
+    border-right: 1px solid var(--other-color);
+
+}
+.campuses a{
+    color: var(--other-color);
+    text-decoration: none;
+}
+
+.faculty h2,.campuses h2,.mail h2{
+    color: var(--text-color);
+    margin-bottom:1cm ;
+}
+.mail{
+    display: inline;
+    text-align: left;
+    padding: 3cm;
+}
+.mail p{
+    color: var(--other-color);
+    margin-bottom: 10px;
+}
+.mail textarea{
+    background-color: var(--other-color);
+    color: var(--text-color);
+    outline: none;
+    border: none;
+    color: var(--main-color);
+}
+.mail input{
+    background-color: var(--other-color);
+    outline: none;
+    text-indent: 5px;
+    color: var(--main-color);
+    border: none;
+    border-radius: 1rem;
+}
+.mail button{
+    margin: 7px;
+    text-align: center;
+    width: 1.3cm;
+    height: 0.6cm;
+    color: var(--text-color);
+    border: none;
+    border-radius: 2rem;
+    justify-content: center;
+    background-color: var(--other-color);
+    transition: all .50s ease;
+    
+}
+.mail button:hover{
+    background-color: var(--main-color);
+    box-shadow: 0px 0px 25px var(--main-color);
+    transform: scale(1.1);
+    color: var(--black-color);
+}
+.last{
+    background-color: var(--black-color);
+    color: var(--other-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1cm;
+}
